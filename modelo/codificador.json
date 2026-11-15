@@ -1,0 +1,154 @@
+{
+ "vocab": {
+  "estado_civil": {
+   "1": 1,
+   "2": 2,
+   "4": 3,
+   "5": 4
+  },
+  "modo_ingreso": {
+   "1": 1,
+   "15": 2,
+   "16": 3,
+   "17": 4,
+   "18": 5,
+   "39": 6,
+   "42": 7,
+   "43": 8,
+   "44": 9,
+   "51": 10,
+   "53": 11,
+   "7": 12
+  },
+  "programa": {
+   "171": 1,
+   "8014": 2,
+   "9003": 3,
+   "9070": 4,
+   "9085": 5,
+   "9119": 6,
+   "9130": 7,
+   "9147": 8,
+   "9238": 9,
+   "9254": 10,
+   "9500": 11,
+   "9556": 12,
+   "9670": 13,
+   "9773": 14,
+   "9853": 15,
+   "9991": 16
+  },
+  "nivel_formacion_previa": {
+   "Básica": 1,
+   "Media": 2,
+   "Superior": 3,
+   "Técnica/tecnológica": 4
+  },
+  "nivel_educ_madre": {
+   "Básica": 1,
+   "Desconocido": 2,
+   "Media": 3,
+   "Superior": 4
+  },
+  "nivel_educ_padre": {
+   "Básica": 1,
+   "Desconocido": 2,
+   "Media": 3,
+   "Superior": 4
+  },
+  "grupo_ocup_madre": {
+   "Agropecuario": 1,
+   "Directivos": 2,
+   "Estudiante": 3,
+   "Oficios industriales y construcción": 4,
+   "Operadores de máquinas": 5,
+   "Otra situación": 6,
+   "Personal administrativo": 7,
+   "Profesionales e intelectuales": 8,
+   "Servicios y ventas": 9,
+   "Trabajadores no calificados": 10,
+   "Técnicos de nivel medio": 11
+  },
+  "grupo_ocup_padre": {
+   "Agropecuario": 1,
+   "Directivos": 2,
+   "Estudiante": 3,
+   "Fuerzas armadas": 4,
+   "Oficios industriales y construcción": 5,
+   "Operadores de máquinas": 6,
+   "Otra situación": 7,
+   "Personal administrativo": 8,
+   "Profesionales e intelectuales": 9,
+   "Servicios y ventas": 10,
+   "Trabajadores no calificados": 11,
+   "Técnicos de nivel medio": 12
+  }
+ },
+ "med_num": {
+  "orden_opcion": 1.0,
+  "nota_formacion_previa": 133.1,
+  "nota_admision": 126.1,
+  "edad_ingreso": 20.0,
+  "tasa_desempleo": 11.1,
+  "tasa_inflacion": 1.4,
+  "pib": 0.32
+ },
+ "mu_num": {
+  "orden_opcion": 1.7211076575303759,
+  "nota_formacion_previa": 132.6434303475558,
+  "nota_admision": 126.96371856456628,
+  "edad_ingreso": 23.263068663464257,
+  "tasa_desempleo": 11.593614015258549,
+  "tasa_inflacion": 1.2235094659508337,
+  "pib": 0.0141141565413959
+ },
+ "sd_num": {
+  "orden_opcion": 1.3100184967541095,
+  "nota_formacion_previa": 13.131468066329969,
+  "nota_admision": 14.651616647890663,
+  "edad_ingreso": 7.609239925419546,
+  "tasa_desempleo": 2.667503055020353,
+  "tasa_inflacion": 1.3772503567118795,
+  "pib": 2.264856541782738
+ },
+ "moda_bin": {
+  "jornada_diurna": 1.0,
+  "desplazado": 1.0,
+  "necesidades_especiales": 0.0,
+  "deudor": 0.0,
+  "matricula_al_dia": 1.0,
+  "genero_masculino": 0.0,
+  "becado": 0.0,
+  "internacional": 0.0
+ },
+ "med_sem": {
+  "convalidadas": 0.0,
+  "inscritas": 6.0,
+  "evaluaciones": 8.0,
+  "aprobadas": 5.0,
+  "nota": 12.333333333333334,
+  "sin_evaluacion": 0.0,
+  "tasa_aprobacion": 0.8333333333333334,
+  "tasa_exito_evaluaciones": 0.625
+ },
+ "mu_sem": {
+  "convalidadas": 0.2032783720764537,
+  "inscritas": 1.9889300522979183,
+  "evaluaciones": 2.1464556652444515,
+  "aprobadas": 1.5635770982808848,
+  "nota": 10.945476854003685,
+  "sin_evaluacion": 0.06796538376020851,
+  "tasa_aprobacion": 0.7129525392690759,
+  "tasa_exito_evaluaciones": 0.5689085105867324
+ },
+ "sd_sem": {
+  "convalidadas": 0.5761818030797525,
+  "inscritas": 0.21259542333343148,
+  "evaluaciones": 0.5472048669218719,
+  "aprobadas": 0.7131043983730706,
+  "nota": 4.5507890515401614,
+  "sin_evaluacion": 0.281337070800215,
+  "tasa_aprobacion": 0.3476448794896566,
+  "tasa_exito_evaluaciones": 0.33504883757958615
+ }
+}
