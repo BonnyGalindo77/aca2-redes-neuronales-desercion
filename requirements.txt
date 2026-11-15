@@ -1,0 +1,5 @@
+streamlit>=1.50
+onnxruntime>=1.20
+numpy>=1.26
+pandas>=2.2
+plotly>=5.24
