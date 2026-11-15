@@ -7,6 +7,12 @@ Docente: Dr. Hamilton Rivera Flor · Grupo 7 · Noviembre de 2026
 
 Continuación del ACA 1 (regresión logística). Una **GRU híbrida con embeddings** lee la trayectoria de cada estudiante semestre a semestre y estima la probabilidad de *Deserción*, *Matriculado* o *Graduado*. Gracias al enmascaramiento de etapa, un solo modelo sirve para alertar al ingreso, tras el 1.er semestre y tras el 1.er año. Se compara con un MLP profundo, un FT-Transformer y la regresión logística del ACA 1 sobre los mismos 885 estudiantes de prueba.
 
+## Enlaces
+
+- **Aplicación en Streamlit:** https://aca2-desercion-gru.streamlit.app
+- **Video explicativo (3:07 min):** https://drive.google.com/file/d/1OJiRGqN1bWCgWoxc5L7awGj0S2MnWrJu/view
+- **Póster:** `entregables/Poster_ACA2_Redes_Neuronales_Desercion.pdf`
+
 ## Estructura
 
 ```
