@@ -1,0 +1,28 @@
+{
+ "objetivo": "Desarrollar una solución con redes neuronales (una <b>GRU híbrida con embeddings</b>, comparada con un MLP profundo y un FT-Transformer) que estime el riesgo de deserción con datos académicos, demográficos y socioeconómicos, desde la gestión de datos en SQL hasta su despliegue en Streamlit.",
+ "problema": "En Colombia deserta cada año el 7,7 % de los universitarios y el 18,2 % de los estudiantes de instituciones tecnológicas (LEE, 2023). En el ACA 1 una regresión logística logró F1 de 0,691, pero necesitó <b>tres modelos</b> para alertar en tres momentos.",
+ "datos": "<b>Predict Students' Dropout and Academic Success</b> (Realinho et al., 2021): 4.424 estudiantes, 36 variables; 32,1 % desertó, 17,9 % sigue matriculado y 49,9 % se graduó. Se normalizó en <b>SQLite</b>:",
+ "datos2": "Limpieza del ACA 1 con <code>UPDATE</code>; EDA con <code>JOIN</code>, <i>self-join</i> y <code>RANK()</code>.",
+ "tray": "Los graduados sostienen su ritmo; quienes desertan arrancan abajo y además caen. El 13,5 % de los desertores pasa de aprobar algo en S1 a no aprobar nada en S2. La <b>dirección del cambio</b> también es información: por eso se eligió una red recurrente.",
+ "arquitectura": "El ingreso inicializa la memoria h₀; la GRU lee S1 y luego S2. Al entrenar se ocultan al azar los semestres «futuros» (<b>enmascaramiento de trayectoria</b>): una sola red alerta en tres etapas. Sin esto, el F1 al ingreso cae de 0,544 a 0,441.",
+ "entrenamiento": "Línea base: la regresión logística del ACA 1. Todas con pesos de clase, AdamW, parada temprana y aumento de datos; cada modelo final es un ensamble de 5 redes en ONNX.",
+ "resultados": "Detecta al <b>71,1 %</b> de los desertores y acierta el 84,5 % de sus alertas; solo 7 graduados (1,6 %) reciben alerta de deserción. Frente al ACA 1 la GRU gana 0,013 de F1 (IC 95 %: −0,006 a 0,031): <b>iguala o supera ligeramente</b> a la regresión, con un solo modelo.",
+ "cap1": "Evaluar un estudiante: riesgo, probabilidad por clase y evolución de la alerta por etapa.",
+ "cap2": "Desempeño: comparación por etapa, tabla de métricas, matriz de confusión y curvas.",
+ "conclusiones": [
+  "<b>Pregunta orientadora:</b> una GRU que lee la trayectoria clasifica a 885 estudiantes nunca vistos con 75,4 % de exactitud, F1 de 0,704 y ROC-AUC de 0,877.",
+  "<b>Un modelo, tres alertas:</b> el enmascaramiento de trayectoria reemplazó los tres modelos del ACA 1 por una sola red.",
+  "<b>Las redes igualan al modelo lineal:</b> empate en validación cruzada (0,720 frente a 0,723) y ventaja no significativa en prueba; su valor está en la lectura secuencial y en probabilidades mejor calibradas (log-loss 0,604).",
+  "<b>Lo que más pesa:</b> el rendimiento del 1.er año y la matrícula al día; apunta a tutorías tempranas y apoyos financieros oportunos.",
+  "<b>Límites:</b> datos de una institución portuguesa, clase <i>Matriculado</i> difícil y variables sensibles (género, edad); hay que reentrenar con datos colombianos."
+ ],
+ "referencias": [
+  "Cho, K., van Merriënboer, B., Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., &amp; Bengio, Y. (2014). Learning phrase representations using RNN encoder–decoder for statistical machine translation. En <i>Proceedings of EMNLP 2014</i> (pp. 1724–1734). https://doi.org/10.3115/v1/D14-1179",
+  "Gorishniy, Y., Rubachev, I., Khrulkov, V., &amp; Babenko, A. (2021). Revisiting deep learning models for tabular data. <i>NeurIPS, 34</i>, 18932–18943.",
+  "Grinsztajn, L., Oyallon, E., &amp; Varoquaux, G. (2022). Why do tree-based models still outperform deep learning on typical tabular data? <i>NeurIPS, 35</i>, 507–520.",
+  "Guo, C., &amp; Berkhahn, F. (2016). <i>Entity embeddings of categorical variables</i> (arXiv:1604.06737). arXiv. https://doi.org/10.48550/arXiv.1604.06737",
+  "Laboratorio de Economía de la Educación. (2023). <i>Deserción en la educación superior en Colombia</i> (Informe n.º 74). Pontificia Universidad Javeriana.",
+  "Realinho, V., Vieira Martins, M., Machado, J., &amp; Baptista, L. (2021). <i>Predict students' dropout and academic success</i> [Conjunto de datos]. UCI Machine Learning Repository. https://doi.org/10.24432/C5MC89",
+  "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., &amp; Polosukhin, I. (2017). Attention is all you need. <i>NeurIPS, 30</i>, 5998–6008."
+ ]
+}
